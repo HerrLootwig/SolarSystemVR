@@ -25,7 +25,7 @@ Material:
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -61,8 +61,8 @@ Material:
     - _QueueOffset: 0
     - _ScrollSpeed: 0.03
     m_Colors:
-    - _DiffColor: {r: 0, g: 0.48795986, b: 1, a: 1}
-    - _FresnelColor: {r: 2.652349, g: 1.1259973, b: 0.26273268, a: 0.9372549}
+    - _DiffColor: {r: 0, g: 0.48691082, b: 1, a: 1}
+    - _FresnelColor: {r: 1.4980392, g: 0.6431373, b: 0.14901961, a: 0.9372549}
     - _HologramTiling: {r: 1, g: 0.42, b: 0, a: 0}
-    - _MainColor: {r: 0, g: 9.257465, b: 28.518965, a: 1}
+    - _MainColor: {r: 0, g: 7.780392, b: 23.968628, a: 1}
   m_BuildTextureStacks: []
