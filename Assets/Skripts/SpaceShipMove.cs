@@ -6,33 +6,20 @@ using static UnityEngine.GraphicsBuffer;
 public class SpaceShipMove : MonoBehaviour
 {
     public GameObject[] celestials;
-    int index = 0;
+    public int index = 0;
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        gameObject.transform.LookAt(2 * transform.position - celestials[index].transform.position);
+        gameObject.transform.LookAt( (2 * transform.position)- celestials[index].transform.position  );
 
-        gameObject.transform.position = celestials[index].transform.position + new Vector3(0.1f,0,0); 
+        gameObject.transform.position = celestials[index].transform.position + new Vector3(-8 - (celestials[index].transform.localScale.x / 2), 0,0); 
+       
     }
 
-    void rotateAround()
-    { 
-
-            
-    
-    }
-
-    public void changePlanet()
+    public void changePlanet(int index)
     {
-        if(index != 1)
-        {
-            index = 1;
-        }
-        else
-        {
-            index = 0;
-        }
+        this.index = index;
     }
     
 }

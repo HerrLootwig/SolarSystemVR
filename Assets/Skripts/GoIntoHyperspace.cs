@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class GoIntoHyperspace : MonoBehaviour
 {
@@ -10,16 +11,20 @@ public class GoIntoHyperspace : MonoBehaviour
     public GameObject hyperspace;
     private bool pressed = false;
     public SpaceShipMove ssm;
+    public ChangeHolo ch;
+    public int index;
 
     private void Update()
     {
-        text.text = cubus.material.color.ToString();
+        index = ch.index;
+
+        text.text = ssm.celestials[ssm.index].name.ToString() + " " + ssm.index;
         if ((cubus.material.color == Color.green) && !pressed)
         {
             hyperspace.SetActive(true);
-            ssm.changePlanet();
+            ssm.changePlanet(index);
             pressed = true;
-            text.text = pressed.ToString();
+            text.text = ssm.celestials[ssm.index].name.ToString();
         } else
         {
             pressed = false;
