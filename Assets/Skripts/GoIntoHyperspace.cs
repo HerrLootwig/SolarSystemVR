@@ -9,6 +9,7 @@ public class GoIntoHyperspace : MonoBehaviour
     public Renderer cubus;
     public GameObject hyperspace;
     private bool pressed = false;
+    public SpaceShipMove ssm;
 
     private void Update()
     {
@@ -16,6 +17,7 @@ public class GoIntoHyperspace : MonoBehaviour
         if ((cubus.material.color == Color.green) && !pressed)
         {
             hyperspace.SetActive(true);
+            ssm.changePlanet();
             pressed = true;
             text.text = pressed.ToString();
         } else

@@ -5,14 +5,15 @@ using static UnityEngine.GraphicsBuffer;
 
 public class SpaceShipMove : MonoBehaviour
 {
-    public GameObject celestial;
+    public GameObject[] celestials;
+    int index = 0;
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        gameObject.transform.LookAt(2 * transform.position - celestial.transform.position);
+        gameObject.transform.LookAt(2 * transform.position - celestials[index].transform.position);
 
-        gameObject.transform.position = celestial.transform.position + new Vector3(10,0,0); 
+        gameObject.transform.position = celestials[index].transform.position + new Vector3(0.1f,0,0); 
     }
 
     void rotateAround()
@@ -20,6 +21,18 @@ public class SpaceShipMove : MonoBehaviour
 
             
     
+    }
+
+    public void changePlanet()
+    {
+        if(index != 1)
+        {
+            index = 1;
+        }
+        else
+        {
+            index = 0;
+        }
     }
     
 }
