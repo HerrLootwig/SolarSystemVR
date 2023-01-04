@@ -25,7 +25,7 @@ public class GoIntoHyperspace : MonoBehaviour
             ssm.changePlanet(index);
             pressed = true;
             text.text = ssm.celestials[ssm.index].name.ToString();
-        } else
+        } else if ((cubus.material.color != Color.green))
         {
             pressed = false;
         }

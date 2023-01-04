@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class ChangeHolo : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class ChangeHolo : MonoBehaviour
 
     public Renderer cubusLeft;
     public Renderer cubusRight;
+    public TextMeshPro text;
 
     bool pressedLeft = false;
 
@@ -20,39 +23,41 @@ public class ChangeHolo : MonoBehaviour
     {
         if ((cubusLeft.material.color == Color.green) && !pressedLeft)
         {
+            pressedLeft = true;
             holos[index].SetActive(false);
             if(index == 0)
             {
                 index = holos.Length - 1;
             }
-            else
+            else 
             {
                 index--;
             }
-            pressedLeft = true;
             holos[index].SetActive(true);
+            text.text = holos[index].name;
         }
-        else
+        else if (cubusLeft.material.color != Color.green)
         {
             pressedLeft = false;
         }
 
         if ((cubusRight.material.color == Color.green) && !pressedRight)
         {
+            pressedRight = true;
             holos[index].SetActive(false);
             if (index == holos.Length - 1)
             {
                 index = 0;
             }
-            else
+            else 
             {
                 index++;
             }
-            pressedRight = true;
             holos[index].SetActive(true);
+            text.text = holos[index].name;
 
         }
-        else
+        else if (cubusRight.material.color != Color.green)
         {
             pressedRight = false;
         }

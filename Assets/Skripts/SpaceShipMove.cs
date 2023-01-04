@@ -13,7 +13,14 @@ public class SpaceShipMove : MonoBehaviour
     {
         gameObject.transform.LookAt( (2 * transform.position)- celestials[index].transform.position  );
 
-        gameObject.transform.position = celestials[index].transform.position + new Vector3(-8 - (celestials[index].transform.localScale.x / 2), 0,0); 
+        if (celestials[index].name.Equals("Saturn") || celestials[index].name.Equals("Jupiter"))
+        {
+            gameObject.transform.position = celestials[index].transform.position + new Vector3(-50 - (celestials[index].transform.localScale.x / 2), 0, 0);
+        }
+        else
+        {
+            gameObject.transform.position = celestials[index].transform.position + new Vector3(-8 - (celestials[index].transform.localScale.x / 2), 0, 0);
+        }
        
     }
 
