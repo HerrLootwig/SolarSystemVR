@@ -18,13 +18,15 @@ public class GoIntoHyperspace : MonoBehaviour
     {
         index = ch.index;
 
-        text.text = ssm.celestials[ssm.index].name.ToString() + " " + ssm.index;
-        if ((cubus.material.color == Color.green) && !pressed)
+        //text.text = (1f / Time.deltaTime).ToString();
+        if ((cubus.material.color == Color.green) && !pressed && (index != ssm.index))
         {
             hyperspace.SetActive(true);
+
+
             ssm.changePlanet(index);
             pressed = true;
-            text.text = ssm.celestials[ssm.index].name.ToString();
+            //text.text = ssm.celestials[ssm.index].name.ToString();
         } else if ((cubus.material.color != Color.green))
         {
             pressed = false;

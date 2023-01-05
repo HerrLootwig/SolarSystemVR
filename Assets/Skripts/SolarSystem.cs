@@ -12,6 +12,8 @@ public class SolarSystem : MonoBehaviour
         celestials = GameObject.FindGameObjectsWithTag("Celestial");
 
         InitialVelocity();
+        //OVRPlugin.systemDisplayFrequency = 90.0f;
+        //OVRManager.display.displayFrequency = 90.0f;
     }
 
     // Update is called once per frame

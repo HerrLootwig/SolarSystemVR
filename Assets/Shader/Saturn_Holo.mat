@@ -61,8 +61,8 @@ Material:
     - _QueueOffset: 0
     - _ScrollSpeed: 0.03
     m_Colors:
-    - _DiffColor: {r: 0.83921576, g: 0.7960785, b: 0.69803923, a: 1}
-    - _FresnelColor: {r: 0.735849, g: 0.5469502, b: 0.23371299, a: 0.9372549}
-    - _HologramTiling: {r: 1, g: 239.9, b: 0, a: 0}
-    - _MainColor: {r: 0.8018868, g: 0.5479315, b: 0.23955731, a: 1}
+    - _DiffColor: {r: 0.21698111, g: 0.18287824, b: 0.09518511, a: 1}
+    - _FresnelColor: {r: 0.730461, g: 0.6795426, b: 0.57112503, a: 1}
+    - _HologramTiling: {r: 1, g: 3.77, b: 0, a: 0}
+    - _MainColor: {r: 0.23839766, g: 0.18447503, b: 0.086500466, a: 1}
   m_BuildTextureStacks: []

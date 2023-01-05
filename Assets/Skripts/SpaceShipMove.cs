@@ -7,6 +7,7 @@ public class SpaceShipMove : MonoBehaviour
 {
     public GameObject[] celestials;
     public int index = 0;
+    //private int lastIndex = 0;
 
     // Update is called once per frame
     void FixedUpdate()
