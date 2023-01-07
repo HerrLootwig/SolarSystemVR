@@ -7,6 +7,7 @@ public class SpaceShipMove : MonoBehaviour
 {
     public GameObject[] celestials;
     public int index = 0;
+    public float distance = -8;
     //private int lastIndex = 0;
 
     // Update is called once per frame
@@ -16,11 +17,13 @@ public class SpaceShipMove : MonoBehaviour
 
         if (celestials[index].name.Equals("Saturn") || celestials[index].name.Equals("Jupiter"))
         {
-            gameObject.transform.position = celestials[index].transform.position + new Vector3(-50 - (celestials[index].transform.localScale.x / 2), 0, 0);
+            distance = -50;
+            gameObject.transform.position = celestials[index].transform.position + new Vector3(distance - (celestials[index].transform.localScale.x / 2), 0, 0);
         }
         else
         {
-            gameObject.transform.position = celestials[index].transform.position + new Vector3(-8 - (celestials[index].transform.localScale.x / 2), 0, 0);
+            distance = -8;
+            gameObject.transform.position = celestials[index].transform.position + new Vector3(distance - (celestials[index].transform.localScale.x / 2), 0, 0);
         }
        
     }
