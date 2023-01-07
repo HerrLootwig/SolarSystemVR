@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Oculus.Interaction;
+using System;
+using Unity.VisualScripting;
 
 public class SpaceShipControlls : MonoBehaviour
 {
@@ -15,13 +17,24 @@ public class SpaceShipControlls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float rotation = lever.transform.rotation.eulerAngles.z;
+        float rotation = lever.transform.rotation.eulerAngles.z - 90;
         if (rotation >= 41)
         {
             rotation = rotation - 360;
         }
         //text.text = rotation.ToString();
-        SpaceShipMove.distance = SpaceShipMove.distance + rotation*0.01f ;
+      /*  if (SpaceShipMove.celestials[SpaceShipMove.index].name.Equals("Saturn") || SpaceShipMove.celestials[SpaceShipMove.index].name.Equals("Jupiter"))
+        {
+            SpaceShipMove.distance = SpaceShipMove.distance - 50;
+        }*/
+        if (SpaceShipMove.distance > -7f)
+        {
+            SpaceShipMove.distance = -7f;
+        }else if(SpaceShipMove.distance < -100f)
+        {
+            SpaceShipMove.distance = -99f;
+        }
+        SpaceShipMove.distance = SpaceShipMove.distance + rotation*0.001f ;
         text.text = SpaceShipMove.distance.ToString();
    
     }

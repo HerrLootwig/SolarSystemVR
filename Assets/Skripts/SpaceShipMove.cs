@@ -13,18 +13,10 @@ public class SpaceShipMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        
         gameObject.transform.LookAt( (2 * transform.position)- celestials[index].transform.position  );
-
-        if (celestials[index].name.Equals("Saturn") || celestials[index].name.Equals("Jupiter"))
-        {
-            distance = -50;
-            gameObject.transform.position = celestials[index].transform.position + new Vector3(distance - (celestials[index].transform.localScale.x / 2), 0, 0);
-        }
-        else
-        {
-            distance = -8;
-            gameObject.transform.position = celestials[index].transform.position + new Vector3(distance - (celestials[index].transform.localScale.x / 2), 0, 0);
-        }
+        gameObject.transform.position = celestials[index].transform.position + new Vector3(distance - (celestials[index].transform.localScale.x / 2), 0, 0);
+        
        
     }
 
