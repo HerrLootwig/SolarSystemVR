@@ -34,13 +34,12 @@ public class SpaceShipControlls : MonoBehaviour
         {
             SpaceShipMove.distance = -99f;
         }
-        SpaceShipMove.distance = SpaceShipMove.distance + rotation*0.001f ;
+        //SpaceShipMove.distance = SpaceShipMove.distance + rotation*0.001f ;
         if((rotation<20) && ( rotation > -20))
         {
             rotation = 0;
         }
         SpaceShipMove.distance = SpaceShipMove.distance + rotation * 0.001f;
-        text.text =rotation.ToString();
    
     }
 }

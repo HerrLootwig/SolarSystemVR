@@ -23,7 +23,6 @@ public class GoIntoHyperspace : MonoBehaviour
         {
             hyperspace.SetActive(true);
 
-
             ssm.changePlanet(index);
             pressed = true;
             //text.text = ssm.celestials[ssm.index].name.ToString();
