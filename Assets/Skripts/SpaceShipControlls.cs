@@ -32,7 +32,7 @@ public class SpaceShipControlls : MonoBehaviour
             SpaceShipMove.distance = -7f;
         }else if(SpaceShipMove.distance < -100f)
         {
-            SpaceShipMove.distance = -99f;
+            SpaceShipMove.distance = -100f;
         }
         //SpaceShipMove.distance = SpaceShipMove.distance + rotation*0.001f ;
         if((rotation<20) && ( rotation > -20))

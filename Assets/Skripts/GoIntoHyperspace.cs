@@ -22,7 +22,7 @@ public class GoIntoHyperspace : MonoBehaviour
         if ((cubus.material.color == Color.green) && !pressed && (index != ssm.index))
         {
             hyperspace.SetActive(true);
-
+            StartCoroutine(WaitForHyperspaceStart());
             ssm.changePlanet(index);
             pressed = true;
             //text.text = ssm.celestials[ssm.index].name.ToString();
@@ -36,4 +36,14 @@ public class GoIntoHyperspace : MonoBehaviour
             hyperspace.SetActive(false);
         }
     }
+
+    IEnumerator WaitForHyperspaceStart()
+    {
+        yield return new WaitForSeconds(1);
+
+    }
+
+
+
 }
+
