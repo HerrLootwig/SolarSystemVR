@@ -31,7 +31,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _FaceTex:
         m_Texture: {fileID: 2800000, guid: 899fd4f0f826eb5409f6e6940a0ad1c7, type: 3}
-        m_Scale: {x: 0, y: 0.33}
+        m_Scale: {x: 0, y: 0.19}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: -3900612629404312951, guid: 3d1d7e345953d9a48b21a1d7cd93a517,
@@ -98,7 +98,7 @@ Material:
     m_Colors:
     - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
     - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
-    - _FaceColor: {r: 3.4762418, g: 7.0972943, b: 10.680627, a: 0.24705882}
+    - _FaceColor: {r: 3.7047036, g: 0, b: 0.3103417, a: 1}
     - _GlowColor: {r: 0.8392157, g: 0.50833726, b: 0.19607842, a: 0.67058825}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
     - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
