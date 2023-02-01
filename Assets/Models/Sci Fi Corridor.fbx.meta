@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0eb1c162f0c90b642b1d70ab673f4f0e
+guid: 11993b50ef755f44885af82fa38b7294
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,13 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: CockpitGrey
-    second: {fileID: 2100000, guid: 6473e2c36531b39468278fb1eec17553, type: 2}
+      name: Mat
+    second: {fileID: 2100000, guid: 777633f08b2b5174d842a368285fb31a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: CockpitInterior
-    second: {fileID: 2100000, guid: d987945c30d77d5469551a181ce8ba09, type: 2}
+      name: Mat.1
+    second: {fileID: 2100000, guid: 37a46ca7c742cc5418e9c91943f71460, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.2
+    second: {fileID: 2100000, guid: fba89639010706748856154f61dd21f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat.3
+    second: {fileID: 2100000, guid: ee4017f36c5cbf143bb68ee7503c5273, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
