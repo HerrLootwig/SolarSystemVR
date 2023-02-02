@@ -5852,7 +5852,7 @@ MonoBehaviour:
   startSound: {fileID: 8300000, guid: 41775efcb04aa8c40ab7284bf0463c51, type: 3}
   stopSound: {fileID: 8300000, guid: f63855f75fa93a04eb4f3d1bd681c0b4, type: 3}
   runningSound: {fileID: 8300000, guid: 931f557e6caa8f94cad7a48a04e903af, type: 3}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1510496710}
 --- !u!82 &1510496710
 AudioSource:
   m_ObjectHideFlags: 0
