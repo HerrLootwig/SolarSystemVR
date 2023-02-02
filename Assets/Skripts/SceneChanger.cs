@@ -16,7 +16,6 @@ public class SceneChanger : MonoBehaviour
     {
         spaceShipAnimator = spaceShip.GetComponent<Animator>();
     }
-    // Update is called once per frame
     void Update()
     {
 
