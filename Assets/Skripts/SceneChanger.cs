@@ -2,13 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
     public GameObject lever;
     public GameObject spaceShip;
     public TextMeshPro text;
+    public Animator doorsAnimator;
+    public GameObject holotexts;
+    private Animator spaceShipAnimator;
 
+    private void Awake()
+    {
+        spaceShipAnimator = spaceShip.GetComponent<Animator>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -25,8 +33,17 @@ public class SceneChanger : MonoBehaviour
         {
             rotation = 0;
         }
-        else { spaceShip.transform.Translate(new Vector3(0,0.001f, rotation * 0.0005f)); }
-        
+        else {
+            doorsAnimator.SetTrigger("Start");
+            spaceShipAnimator.SetTrigger("Start");
+            holotexts.SetActive(false);
+        }
+
+
+        if (spaceShipAnimator.GetCurrentAnimatorStateInfo(0).IsName("Spaceship_start") && spaceShipAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.99f)
+        {
+            SceneManager.LoadScene("Main");
+        }
 
     }
 }
