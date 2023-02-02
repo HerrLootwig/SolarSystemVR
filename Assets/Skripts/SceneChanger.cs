@@ -12,6 +12,8 @@ public class SceneChanger : MonoBehaviour
     public GameObject holotexts;
     private Animator spaceShipAnimator;
     public GameObject transition;
+    public GameObject cockpit;
+    public GameObject robot;
 
     private void Awake()
     {
@@ -40,8 +42,8 @@ public class SceneChanger : MonoBehaviour
 
         if (spaceShipAnimator.GetCurrentAnimatorStateInfo(0).IsName("Spaceship_start") && spaceShipAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.99f)
         {
-            transition.SetActive(true);
-            //DontDestroyOnLoad(transition);
+            cockpit.SetActive(false);
+            robot.SetActive(false);
             SceneManager.LoadScene("Main");
         }
 

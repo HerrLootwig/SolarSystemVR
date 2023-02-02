@@ -66,7 +66,7 @@ public class SpaceShipControlls : MonoBehaviour
             start = true;
         }
 
-        SpaceShipMove.distance = SpaceShipMove.distance + rotation * 0.001f;
+        SpaceShipMove.distance = SpaceShipMove.distance - rotation * 0.001f;
    
     }
 }
