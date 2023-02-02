@@ -12,6 +12,16 @@ public class SpaceShipControlls : MonoBehaviour
     public TextMeshPro text;
     public GameObject spaceShip;
     public SpaceShipMove SpaceShipMove;
+
+    private bool start = true;
+    private bool stop = false;
+
+    public AudioClip startSound;
+    public AudioClip stopSound;
+    public AudioClip runningSound;
+    public AudioSource audioSource;
+
+
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -38,7 +48,24 @@ public class SpaceShipControlls : MonoBehaviour
         if((rotation<20) && ( rotation > -20))
         {
             rotation = 0;
+
         }
+        else if (start)
+        {
+            start = false;
+            audioSource.PlayOneShot(startSound);
+            audioSource.Play();
+            stop = true;
+        }
+
+        if (rotation == 0 && stop)
+        {
+            audioSource.Stop();
+            audioSource.PlayOneShot(stopSound);
+            stop = false;
+            start = true;
+        }
+
         SpaceShipMove.distance = SpaceShipMove.distance + rotation * 0.001f;
    
     }

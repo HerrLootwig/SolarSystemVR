@@ -8,7 +8,6 @@ public class SceneChanger : MonoBehaviour
 {
     public GameObject lever;
     public GameObject spaceShip;
-    public TextMeshPro text;
     public Animator doorsAnimator;
     public GameObject holotexts;
     private Animator spaceShipAnimator;
@@ -23,7 +22,6 @@ public class SceneChanger : MonoBehaviour
 
         float rotation = lever.transform.rotation.eulerAngles.z - 90;
 
-        text.text = rotation.ToString();
         if (rotation >= 41)
         {
             rotation = rotation - 360;
